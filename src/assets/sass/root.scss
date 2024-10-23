@@ -1,20 +1,23 @@
 /* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 
+
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
+
 
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
     // Website colors
     :root {
-        --primary: #ffba19;
-        --primaryLight: #ffd675;
-        --secondary: #001f3f;
-        --secondaryLight: #001f3f;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
+        --primary: #d2ae6d;
+        --primaryLight: #d2ae6d;
+        --secondary: #2d354e;
+        --secondaryLight: #2d354e;
+        --headerColor: #2d354e;
+        --bodyTextColor: #2d354e;
+        --bodyTextColorWhite: #fdfaf3;
+
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -22,9 +25,11 @@
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1rem;
 
+
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
+
 
     // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
@@ -39,6 +44,7 @@
         text-align: inherit;
     }
 
+
     .cs-title {
         position: relative;
         margin: 0 0 1rem 0;
@@ -50,6 +56,7 @@
         text-align: inherit;
     }
 
+
     .cs-text {
         margin: 0;
         max-width: 40.625rem;
@@ -59,6 +66,7 @@
         color: var(--bodyTextColor);
         text-align: inherit;
     }
+
 
     // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
@@ -74,18 +82,21 @@
         line-height: calc(50 / 16 * 1em);
         font-weight: bold;
 
+
         // Transition Properties
-        color: #000;
+        color: #2d354e;
         transition: color 0.3s;
         transition-delay: 0.1s;
         text-align: center;
 
+
         &:hover {
-            color: #fff;
+            color: #fdfaf3;
             &:before {
                 width: 100%;
             }
         }
+
 
         &:before {
             z-index: -1;
@@ -95,8 +106,9 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #000;
+            background-color: #2d354e;
             height: 100%;
+
 
             //Transition properties
             width: 0;
@@ -104,10 +116,12 @@
         }
     }
 
+
     .cs-hide-on-mobile {
         display: none;
     }
 }
+
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -115,10 +129,12 @@
         display: block;
     }
 
+
     .cs-hide-on-desktop {
         display: none;
     }
 }
+
 
 /* Fonts and general styles */
 @media only screen and (min-width: 0rem) {
@@ -132,6 +148,7 @@
         color: var(--bodyTextColor);
     }
 
+
     *,
     *:before,
     *:after {
@@ -140,15 +157,18 @@
         padding: 0;
     }
 
+
     body {
         transition: background-color 0.3s;
     }
+
 
     .container {
         position: relative;
         margin: auto;
         width: 92%;
     }
+
 
     h1,
     h2,
@@ -160,6 +180,7 @@
         color: var(--headerColor);
     }
 
+
     p,
     li,
     a {
@@ -168,10 +189,12 @@
         line-height: 1.5em;
     }
 
+
     p,
     li {
-        color: #353535;
+        color: #2d354e;
     }
+
 
     a,
     button {
@@ -179,6 +202,7 @@
             cursor: pointer;
         }
     }
+
 
     // Hidden Screen reader skip nav button
     .skip {
@@ -189,6 +213,7 @@
         opacity: 0;
     }
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
+
 
     /* roboto-regular - latin */
     @font-face {
@@ -219,6 +244,7 @@
     }
 }
 
+
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
     body,
@@ -228,6 +254,7 @@
     }
 }
 
+
 /* Scale full website with the viewport width */
 @media only screen and (min-width: 3000px) {
     body,
@@ -236,9 +263,11 @@
     }
 }
 
+
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
+
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -249,65 +278,85 @@
                 transform: translate(-50%, -50%);
             }
 
+
             .cs-moon {
                 opacity: 0;
                 transform: translate(-50%, -150%);
-                fill: #fff;
             }
         }
     }
 
+
     #dark-mode-toggle {
-        z-index: 1000;
-        position: absolute;
-        top: calc(10 / 16 * 1rem);
-        right: calc(70 / 16 * 1rem);
-        display: block;
-        border: none;
-        background: transparent;
-        height: calc(48 / 16 * 1rem);
         width: calc(48 / 16 * 1rem);
-        overflow: hidden;
+        height: calc(48 / 16 * 1rem);
         padding: 0;
+        background: transparent;
+        border: none;
+        display: block;
+        order: 2;
+        position: relative;
+        z-index: 1000;
+        overflow: hidden;
+
 
         img,
         svg {
+            width: calc(20 / 16 * 1rem);
+            height: calc(20 / 16 * 1rem);
             //center image inside button
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: calc(20 / 16 * 1rem);
-            width: calc(20 / 16 * 1rem);
             pointer-events: none;
         }
+
 
         .cs-moon {
             z-index: 2;
             // Transition properties
-            transition: transform 0.3s, opacity 0.3s;
-
-            // fill: yellow; --> uncomment to change the color of the moon if needed
+            transition:
+                transform 0.3s,
+                opacity 0.3s;
+            fill: #2d354e;
         }
 
+
         .cs-sun {
-            z-index: 1;
             opacity: 0;
+            z-index: 1;
             // Transition property
             transform: translate(-50%, 100%);
-            transition: transform 0.3s, opacity 0.3s;
+            transition:
+                transform 0.3s,
+                opacity 0.3s;
         }
     }
 }
 
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #dark-mode-toggle {
+        margin-left: calc(16 / 16 * 1rem);
+        order: 3;
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #dark-mode-toggle {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
         margin: 0;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        transform: none;
+
 
         &:hover {
             cursor: pointer;
@@ -315,9 +364,11 @@
     }
 }
 
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
+
 
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
@@ -325,62 +376,169 @@
         &.cs-open {
             overflow: hidden;
         }
+
+
+        &.scroll {
+            #cs-navigation {
+                .cs-top-container {
+                    gap: 0;
+                }
+
+
+                .cs-top-social {
+                    height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow: hidden;
+                }
+            }
+        }
     }
 
-    #cs-navigation {
-        z-index: 10000;
-        position: fixed;
-        background-color: #fff;
-        width: 100%;
-        /* prevents padding from affecting height and width */
-        box-sizing: border-box;
-        padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
-        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-        .cs-container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+    #cs-navigation {
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fdfaf3;
+        box-shadow: #2d354e;
+        position: fixed;
+        z-index: 10000;
+
+
+        &:before {
+            content: "";
             width: 100%;
+            height: 0vh;
+            background: #2d354e;
+            opacity: 0;
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: -1100;
+            transition:
+                height 0.5s,
+                opacity 0.5s;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
         }
 
-        .cs-logo {
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 0 0;
-            height: 100%;
-            max-width: calc(146 / 16 * 1rem);
-            width: 40%;
-            /* prevents padding from affecting height and width */
-            box-sizing: border-box;
-            padding: 0;
 
-            img {
-                height: 100%;
-                width: 100%;
-                /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-                object-fit: contain;
-                /* places the image to the left edge of the parent */
-                object-position: left;
+        &.cs-active {
+            &:before {
+                height: 150vh;
+                opacity: 1;
+            }
+            .cs-ul-wrapper {
+                opacity: 1;
+                transform: scaleY(1);
+                transition-delay: 0.15s;
+            }
+
+
+            .cs-li {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .cs-toggle {
+
+        .cs-top-bar {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: none;
-            border-radius: calc(4 / 16 * 1rem);
-            margin: 0 0 0 auto;
-            background-color: transparent;
-            height: clamp(2.75rem, 6vw, 3rem);
-            /* 44px - 48px */
-            width: clamp(2.75rem, 6vw, 3rem);
         }
+
+
+        .cs-top-container {
+            width: 100%;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            /* 16px - 20px */
+            padding: clamp(1rem, 2.5vw, 1.25rem) calc(16 / 16 * 1rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+
+        .cs-contact-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+            gap: calc(40 / 16 * 1rem);
+        }
+
+
+        .cs-contact-link {
+            display: none;
+        }
+
+
+        .cs-container {
+            width: 100%;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            /* 16px - 20px */
+            padding: clamp(1rem, 2.5vw, 1.25rem) calc(16 / 16 * 1rem);
+            background-color: #2d354e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+
+        .cs-logo {
+            width: 100%;
+            max-width: calc(197 / 16 * 1rem);
+            height: calc(60 / 16 * 1rem);
+            /* margin-right auto pushes everything away from it to the right */
+            margin: 0 auto 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+                object-fit: contain;
+            }    
+        }      
+       
+        .cs-nav {
+            order: 2;
+        }
+
+
+        .cs-toggle {
+            /* 48px - 56px */
+            width: clamp(3rem, 7.2vw, 3.5rem);
+            height: clamp(3rem, 7.2vw, 3.5rem);
+            margin: 0 0 0 auto;
+            background-color: #484848;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.6s;
+
+
+            &.cs-active {
+                transform: rotate(180deg);
+            }
+        }
+
 
         .cs-active {
             .cs-line1 {
@@ -388,39 +546,46 @@
                 transform: translate(-50%, -50%) rotate(225deg);
             }
 
+
             .cs-line2 {
                 top: 50%;
                 transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
                 transform-origin: center;
             }
 
+
             .cs-line3 {
-                bottom: 100%;
                 opacity: 0;
+                bottom: 100%;
             }
         }
 
+
         .cs-box {
-            position: relative;
-            /* 14px - 16px */
-            height: clamp(0.875rem, 1.5vw, 1rem);
             /* 24px - 28px */
             width: clamp(1.5rem, 2vw, 1.75rem);
+            height: calc(16 / 16 * 1rem);
+            position: relative;
         }
 
+
         .cs-line {
+            width: 100%;
+            height: 2px;
+            background-color: #fdfaf3;
+            border-radius: 2px;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 2px;
-            background-color: #1a1a1a;
-            height: 2px;
-            width: 100%;
         }
+
 
         .cs-line1 {
             top: 0;
-            transition: transform 0.5s, top 0.3s, left 0.3s;
+            transition:
+                transform 0.5s,
+                top 0.3s,
+                left 0.3s;
             animation-duration: 0.7s;
             animation-timing-function: ease;
             animation-direction: normal;
@@ -428,342 +593,76 @@
             transform-origin: center;
         }
 
+
         .cs-line2 {
             top: 50%;
             transform: translateX(-50%) translateY(-50%);
-            transition: top 0.3s, left 0.3s, transform 0.5s;
+            transition:
+                top 0.3s,
+                left 0.3s,
+                transform 0.5s;
             animation-duration: 0.7s;
             animation-timing-function: ease;
             animation-direction: normal;
             animation-fill-mode: forwards;
         }
 
+
         .cs-line3 {
             bottom: 0;
-            transition: bottom 0.3s, opacity 0.3s;
+            transition:
+                bottom 0.3s,
+                opacity 0.3s;
         }
+
 
         .cs-ul-wrapper {
+            width: 100%;
+            height: auto;
+            padding-bottom: calc(48 / 16 * 1rem);
+            background-color: #fdfaf3;
+            box-shadow: inset #2d354e;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
             z-index: -1;
-            position: absolute;
-            top: 100%;
-            left: auto;
-            right: 0;
-            opacity: 0;
-            visibility: hidden;
-            transform: scaleX(0);
-            background-color: #fff;
-            height: 100vh;
             overflow: hidden;
-            transition: transform 0.4s, opacity 0.3s;
-            box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
-            transform-origin: top right;
-        }
-
-        .cs-ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            margin: 0;
-            height: 65vh;
-            min-width: 40%;
-            width: auto;
-            overflow: scroll;
-            /* 28px - 40px */
-            padding: calc(48 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem) calc(32 / 16 * 1rem) calc(70 / 16 * 1rem);
-            gap: calc(20 / 16 * 1rem);
-        }
-
-        .cs-li {
-            opacity: 0;
-            /* transition from these values */
-            transform: translateX(calc(-40 / 16 * 1rem));
-            margin-right: 0;
-            width: 100%;
-            list-style: none;
-            transition: transform 0.6s, opacity 0.9s;
-            text-align: right;
-
-            &:nth-of-type(1) {
-                transition-delay: 0.05s;
-            }
-            &:nth-of-type(2) {
-                transition-delay: 0.1s;
-            }
-            &:nth-of-type(3) {
-                transition-delay: 0.15s;
-            }
-            &:nth-of-type(4) {
-                transition-delay: 0.2s;
-            }
-            &:nth-of-type(5) {
-                transition-delay: 0.25s;
-            }
-            &:nth-of-type(6) {
-                transition-delay: 0.3s;
-            }
-            &:nth-of-type(7) {
-                transition-delay: 0.35s;
-            }
-            &:nth-of-type(8) {
-                transition-delay: 0.4s;
-            }
-            &:nth-of-type(9) {
-                transition-delay: 0.45s;
-            }
-        }
-
-        .cs-li-link {
-            position: relative;
-            display: inline-block;
-            margin: 0;
-            text-decoration: none;
-            /* 16px - 24px */
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
-            line-height: 1.2em;
-            color: var(--headerColor);
-
-            &:before {
-                position: absolute;
-                bottom: calc(-2 / 16 * 1rem);
-                left: 0;
-                /* active state underline */
-                content: "";
-                opacity: 1;
-                display: none;
-                background: currentColor;
-                height: 1px;
-                width: 100%;
-            }
-
-            &.cs-active {
-                &:before {
-                    display: block;
-                }
-            }
-        }
-
-        .cs-button-solid {
-            display: none;
-        }
-
-        &:before {
-            z-index: -11;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            /* black blurred overlay */
-            content: "";
-            opacity: 0;
-            display: block;
-            background: rgba(0, 0, 0, 0.6);
-            height: 100vh;
-            width: 0%;
-            transition: width 0.5s, opacity 0.3s;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-
-        &.cs-active {
-            .cs-ul-wrapper {
-                opacity: 1;
-                visibility: visible;
-                transform: scaleX(1);
-                transition-delay: 0.2s;
-            }
-
-            .cs-li {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            &:before {
-                opacity: 1;
-                width: 100%;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-    body.dark-mode {
-        #cs-navigation {
-            background-color: var(--dark);
-
-            .cs-logo {
-                /* makes it white */
-                filter: grayscale(1) brightness(1000%);
-            }
-
-            .cs-line {
-                background-color: #fff;
-            }
-
-            .cs-ul-wrapper {
-                background-color: var(--medium);
-            }
-
-            .cs-li-link {
-                color: var(--bodyTextColorWhite);
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---     Navigation Dropdown    -->
-<--- -------------------------- -*/
-
-/* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
-    #cs-navigation {
-        .cs-dropdown {
-            position: relative;
-            color: var(--bodyTextColorWhite);
-
-            .cs-li-link {
-                position: relative;
-                transition: opacity 0.3s;
-            }
-
-            &.cs-active {
-                .cs-drop-ul {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: scale(1);
-                    margin: calc(12 / 16 * 1rem) 0 0 0;
-                    height: auto;
-                    padding: calc(24 / 16 * 1rem);
-                }
-
-                .cs-drop-link {
-                    opacity: 1;
-                }
-            }
-        }
-
-        .cs-dropdown-button {
-            border: none;
-            background-color: transparent;
-            font-family: inherit;
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
-            cursor: pointer;
-            appearance: none;
-        }
-
-        .cs-drop-icon {
-            position: absolute;
-            top: 50%;
-            right: calc(-20 / 16 * 1rem);
-            transform: translateY(-50%);
-            height: auto;
-            width: calc(15 / 16 * 1rem);
-        }
-
-        .cs-drop-ul {
-            visibility: hidden;
-            opacity: 0;
-            transform: scale(0);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            margin: 0;
-            background-color: var(--primary);
-            height: 0;
-            width: 100%;
-            box-sizing: border-box;
-            overflow: hidden;
-            padding: 0 calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
-            transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, transform 0.3s, visibility 0.3s;
-            gap: calc(12 / 16 * 1rem);
-            transform-origin: top right;
-        }
-
-        .cs-drop-li {
-            list-style: none;
-            text-align: inherit;
-        }
-
-        .cs-li-link {
-            &.cs-drop-link {
-                /* 14px - 16px */
-                font-size: clamp(0.875rem, 2vw, 1.25rem);
-                color: #fff;
-            }
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #cs-navigation {
-        .cs-dropdown {
-            position: relative;
-
-            &.cs-active,
-            &:hover {
-                cursor: pointer;
-                .cs-drop-ul {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: scaleY(1);
-                }
-
-                .cs-drop-li {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        }
-
-        .cs-dropdown-button {
-            border: none;
-            background-color: transparent;
-            font-family: inherit;
-            font-size: inherit;
-            cursor: pointer;
-            appearance: none;
-        }
-
-        .cs-drop-icon {
-            display: inline-block;
-            height: auto;
-            width: calc(15 / 16 * 1rem);
-        }
-
-        .cs-drop-ul {
-            z-index: -100;
-            /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
-            // columns: 2;
-            position: absolute;
-            top: 100%;
-            visibility: hidden;
-            opacity: 0;
             transform: scaleY(0);
-            border-bottom: 5px solid var(--primary);
-            margin: 0;
-            background-color: #fff;
-            min-width: calc(200 / 16 * 1rem);
-            overflow: hidden;
-            padding: 0;
-            transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
+            transition:
+                transform 0.4s,
+                opacity 0.3s;
             transform-origin: top;
         }
 
-        .cs-drop-li {
-            opacity: 0;
-            transform: translateY(calc(-10 / 16 * 1rem));
-            display: block;
-            height: auto;
+
+        .cs-ul {
             width: 100%;
+            height: auto;
+            max-height: 65vh;
+            margin: 0;
+            padding: calc(48 / 16 * 1rem) 0 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: scroll;
+            gap: calc(20 / 16 * 1rem);
+        }
+
+
+        .cs-li {
+            text-align: center;
             list-style: none;
-            text-decoration: none;
-            font-size: calc(16 / 16 * 1rem);
-            color: var(--bodyTextColor);
-            transition: opacity 0.6s, transform 0.6s;
+            width: 100%;
+            margin-right: 0;
+            opacity: 0;
+            /* transition from these values */
+            transform: translateY(calc(-70 / 16 * 1rem));
+            transition:
+                transform 0.6s,
+                opacity 0.9s;
+
 
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
@@ -806,28 +705,422 @@
             }
         }
 
+
+        .cs-li-link {
+            /* 16px - 24px */
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            line-height: 1.2em;
+            text-decoration: none;
+            margin: 0;
+            color: var(--headerColor);
+            display: inline-block;
+            position: relative;
+
+
+            &.cs-active {
+                color: var(--primary);
+            }
+
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            font-weight: 700;
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-align: center;
+            text-decoration: none;
+            min-width: calc(150 / 16 * 1rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 calc(24 / 16 * 1rem);
+            color: #2d354e;
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+
+
+            &:before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #2d354e;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+
+            &:hover {
+                color: #fdfaf3;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .cs-button-solid {
+            margin: 0;
+            display: none;
+        }
+
+
+        .cs-call {
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            gap: calc(16 / 16 * 1rem);
+
+
+            &:before {
+                /* light green circle that animates on hover */
+                content: "";
+                width: calc(48 / 16 * 1rem);
+                height: calc(48 / 16 * 1rem);
+                background: #fdfaf3;
+                opacity: 1;
+                border-radius: calc(24 / 16 * 1rem);
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: -1;
+                transform: translateY(-50%);
+                transition:
+                    width 0.3s,
+                    height 0.3s,
+                    border-radius 0.3s;
+            }
+
+
+            .cs-wrapper {
+                width: calc(56 / 16 * 1rem);
+                height: calc(56 / 16 * 1rem);
+                background-color: var(--primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.3s;
+                /* prevents flexbox from squishing it */
+                flex: none;
+            }
+
+
+            .cs-icon {
+                width: calc(24 / 16 * 1rem);
+                height: auto;
+                display: block;
+                transition: transform 0.3s;
+            }
+
+
+            .cs-info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+
+            .cs-header {
+                font-size: calc(14 / 16 * 1rem);
+                font-weight: 400;
+                line-height: 1.2em;
+                margin: 0;
+                color: var(--bodyTextColorWhite);
+                display: block;
+            }
+
+
+            .cs-link-content {
+                font-size: calc(20 / 16 * 1rem);
+                font-weight: 700;
+                line-height: 1.2em;
+                margin: 0;
+                color: var(--bodyTextColorWhite);
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cs-navigation {
+        .cs-button-solid {
+            display: block;
+        }
+    }
+}
+
+
+/* Dark Mode */
+@media only screen and (max-width: 63.9375rem) {
+    body.dark-mode {
+        #cs-navigation {
+            background-color: var(--dark);
+
+
+            .cs-logo {
+                /* makes it white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+
+            .cs-ul-wrapper {
+                background-color: var(--dark);
+            }
+
+
+            .cs-li-link {
+                color: var(--bodyTextColorWhite);
+            }
+
+
+            .cs-container {
+                background-color: #2d354e;
+            }
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---     Navigation Dropdown    -->
+<--- -------------------------- -*/
+
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #cs-navigation {
+        .cs-li {
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+
+
+        .cs-dropdown {
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            &.cs-active {
+                .cs-drop-ul {
+                    height: auto;
+                    margin: calc(12 / 16 * 1rem) 0 0 0;
+                    padding: calc(12 / 16 * 1rem) 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+
+                .cs-drop-link {
+                    opacity: 1;
+                }
+            }
+
+
+            .cs-li-link {
+                position: relative;
+                transition: opacity 0.3s;
+            }
+        }
+
+
+        .cs-drop-icon {
+            width: calc(15 / 16 * 1rem);
+            height: auto;
+            position: absolute;
+            top: 50%;
+            right: calc(-20 / 16 * 1rem);
+            transform: translateY(-50%);
+        }
+
+
+        .cs-drop-ul {
+            width: 100%;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary);
+            opacity: 0;
+            display: flex;
+            visibility: hidden;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            transition:
+                padding 0.3s,
+                margin 0.3s,
+                height 0.3s,
+                opacity 0.3s,
+                visibility 0.3s;
+            gap: calc(12 / 16 * 1rem);
+        }
+
+
+        .cs-drop-li {
+            list-style: none;
+        }
+
+
         .cs-li-link {
             &.cs-drop-link {
-                display: block;
-                width: 100%;
-                /* prevents padding from affecting height and width */
-                box-sizing: border-box;
-                padding: calc(12 / 16 * 1rem);
-                white-space: nowrap;
-                text-decoration: none;
+                /* 14px - 16px */
+                font-size: clamp(0.875rem, 2vw, 1.25rem);
+                color: #fdfaf3;
+            }
+        }
+    }
+}
+
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-navigation {
+        .cs-dropdown {
+            position: relative;
+            &:hover {
+                cursor: pointer;
+                .cs-drop-ul {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scaleY(1);
+                }
+
+
+                .cs-drop-li {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+
+        .cs-drop-icon {
+            width: calc(15 / 16 * 1rem);
+            height: auto;
+            display: inline-block;
+        }
+
+
+        .cs-drop-ul {
+            min-width: calc(200 / 16 * 1rem);
+            margin: 0;
+            padding: 0;
+            background-color: #fdfaf3;
+            box-shadow: #2d354e;
+            opacity: 0;
+            border-bottom: 5px solid var(--primary);
+            visibility: hidden;
+            /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
+            // columns: 2;
+            position: absolute;
+            top: 100%;
+            z-index: -100;
+            overflow: hidden;
+            transform: scaleY(0);
+            transition:
+                transform 0.3s,
+                visibility 0.3s,
+                opacity 0.3s;
+            transform-origin: top;
+        }
+
+
+        .cs-drop-li {
+            font-size: calc(16 / 16 * 1rem);
+            text-decoration: none;
+            list-style: none;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            display: block;
+            transform: translateY(calc(-10 / 16 * 1rem));
+            transition:
+                opacity 0.6s,
+                transform 0.6s;
+
+
+            &:nth-of-type(1) {
+                transition-delay: 0.05s;
+            }
+            &:nth-of-type(2) {
+                transition-delay: 0.1s;
+            }
+            &:nth-of-type(3) {
+                transition-delay: 0.15s;
+            }
+            &:nth-of-type(4) {
+                transition-delay: 0.2s;
+            }
+            &:nth-of-type(5) {
+                transition-delay: 0.25s;
+            }
+            &:nth-of-type(6) {
+                transition-delay: 0.3s;
+            }
+            &:nth-of-type(7) {
+                transition-delay: 0.35s;
+            }
+            &:nth-of-type(8) {
+                transition-delay: 0.4s;
+            }
+            &:nth-of-type(9) {
+                transition-delay: 0.45s;
+            }
+            &:nth-of-type(10) {
+                transition-delay: 0.5s;
+            }
+            &:nth-of-type(11) {
+                transition-delay: 0.55s;
+            }
+            &:nth-of-type(12) {
+                transition-delay: 0.6s;
+            }
+            &:nth-of-type(13) {
+                transition-delay: 0.65s;
+            }
+        }
+
+
+        .cs-li-link {
+            &.cs-drop-link {
                 font-size: calc(16 / 16 * 1rem);
                 line-height: 1.5em;
+                text-transform: capitalize;
+                text-decoration: none;
+                white-space: nowrap;
+                width: 100%;
+                /* prevents padding and border from affecting height and width */
+                box-sizing: border-box;
+                padding: calc(12 / 16 * 1rem);
                 color: var(--bodyTextColor);
-                transition: color 0.3s, background-color 0.3s;
+                display: block;
+                transition:
+                    color 0.3s,
+                    background-color 0.3s;
+
 
                 &:hover {
-                    background-color: #f7f7f7;
+                    color: var(--primary);
+                    background-color: #fdfaf3;
                 }
 
-                &:focus-visible {
-                    outline: 2px solid currentColor;
-                    outline-offset: -4px;
-                }
 
                 &:before {
                     display: none;
@@ -837,137 +1130,405 @@
     }
 }
 
+
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
+@media only screen and (min-width: 64rem) {
     body.dark-mode {
         #cs-navigation {
             .cs-drop-ul {
                 background-color: var(--dark);
             }
 
+
             .cs-li-link {
                 &.cs-drop-link {
+                    color: var(--bodyTextColorWhite);
                     &:hover {
-                        background-color: var(--medium);
+                        background-color: #2d354e;
+                    }
+
+
+                    &:before {
+                        display: none;
                     }
                 }
-            }
-
-            .cs-drop-icon {
-                /* turns it white */
-                filter: grayscale(1) brightness(1000%);
             }
         }
     }
 }
+
 
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
 
+
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #cs-navigation {
-        z-index: 10000;
-        position: fixed;
-        background-color: #fff;
         width: 100%;
-        /* prevents padding from affecting height and width */
+        /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-        padding: 0 calc(16 / 16 * 1rem);
-        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 0;
+        background-color: #fdfaf3;
+        box-shadow: #2d354e;
+        position: fixed;
+        z-index: 10000;
 
-        .cs-container {
+
+        .cs-top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .cs-top-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            padding: calc(16 / 16 * 1rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: calc(24 / 16 * 1rem);
+        }
+
+
+        .cs-contact-group {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            margin: auto;
-            max-width: calc(1280 / 16 * 1rem);
-            width: 100%;
             gap: calc(24 / 16 * 1rem);
         }
+
+
+        .cs-contact-link {
+            text-decoration: none;
+            padding-right: calc(30 / 16 * 1rem);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 200px;
+            gap: calc(16 / 16 * 1rem);
+
+
+            &:nth-of-type(2) {
+                display: none;
+            }
+
+
+            &:hover {
+                .cs-wrapper {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
+
+        .cs-wrapper {
+            width: calc(56 / 16 * 1rem);
+            height: calc(56 / 16 * 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.6s;
+            /* prevents flexbox from squishing it */
+            flex: none;
+
+
+            &:before {
+                /* backgorund color in pseudo so we can use the primary color variable and use opacity */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: var(--primary);
+                opacity: 0.1;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+
+        .cs-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(4 / 16 * 1rem);
+        }
+
+
+        .cs-header {
+            font-size: calc(16 / 16 * 1rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+
+        .cs-link-content {
+            font-size: calc(14 / 16 * 1rem);
+            font-weight: 400;
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            font-weight: 700;
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-align: center;
+            text-decoration: none;
+            min-width: calc(150 / 16 * 1rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 calc(48 / 16 * 1rem);
+            color: #2d354e;
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+
+
+            &:before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #2d354e;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+
+            &:hover {
+                color: #fdfaf3;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .cs-bottom-bar {
+            width: 100%;
+            background-color: #2d354e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            /* prevents padding from affectin gheight */
+            box-sizing: border-box;
+            padding: 0 calc(16 / 16 * 1rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            gap: calc(24 / 16 * 1rem);
+        }
+
 
         .cs-toggle {
             display: none;
         }
 
+
         .cs-logo {
-            z-index: 100;
+            width: 18.4%;
+            max-width: calc(197 / 16 * 1rem);
+            height: calc(60 / 16 * 1rem);
+            /* margin-right auto pushes everything away from it to the right */
+            margin: 0 auto 0 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* margin-right auto pushes everything away from it to the right */
-            margin: 0 auto 0 0;
-            height: calc(65 / 16 * 1rem);
-            max-width: calc(350 / 16 * 1rem);
-            width: 18.4%;
-            padding: 0;
+            z-index: 100;
+
 
             img {
-                height: 100%;
                 width: 100%;
+                height: 100%;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
         }
 
+
         .cs-ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin: 0;
-            width: 100%;
-            padding: 0;
-            /* 20px - 36px */
-            gap: clamp(1.25rem, 2.6vw, 2.25rem);
+            gap: calc(36 / 16 * 1rem);
         }
 
+
         .cs-li {
-            padding: calc(32 / 16 * 1rem) 0;
             list-style: none;
+            padding: calc(36 / 16 * 1rem) 0;
             /* prevent flexbox from squishing it */
             flex: none;
         }
 
+
         .cs-li-link {
-            position: relative;
-            display: block;
-            margin: 0;
-            text-decoration: none;
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: calc(16 / 16 * 1rem);
             line-height: 1.5em;
-            color: var(--bodyTextColor);
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            display: block;
+            position: relative;
+            transition: color 0.3s;
+
+
             &:hover {
-                &:before {
-                    width: 100%;
-                }
+                color: var(--primary);
             }
 
-            &:before {
-                position: absolute;
-                bottom: calc(0 / 16 * 1rem);
-                left: 0;
-                /* active state underline */
-                content: "";
-                opacity: 1;
-                display: block;
-                background: var(--primary);
-                height: 2px;
-                width: 0%;
-                transition: width 0.3s;
-            }
 
             &.cs-active {
-                &:before {
-                    width: 100%;
+                font-weight: 700;
+                color: var(--primary);
+            }
+        }
+
+
+        .cs-call {
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 200px;
+            gap: calc(16 / 16 * 1rem);
+
+
+            &:hover {
+                &:hover {
+                    .cs-wrapper {
+                        transform: rotateY(180deg);
+                    }
                 }
+            }
+
+
+            .cs-wrapper {
+                width: calc(56 / 16 * 1rem);
+                height: calc(56 / 16 * 1rem);
+                background-color: var(--primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.6s;
+                /* prevents flexbox from squishing it */
+                flex: none;
+            }
+
+
+            .cs-icon {
+                width: calc(24 / 16 * 1rem);
+                height: auto;
+                display: block;
+                transition: transform 0.3s;
+            }
+
+
+            .cs-info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+
+            .cs-header {
+                font-size: calc(14 / 16 * 1rem);
+                font-weight: 400;
+                line-height: 1.2em;
+                margin: 0;
+                color: var(--bodyTextColorWhite);
+                display: block;
+            }
+
+
+            .cs-link-content {
+                font-size: calc(20 / 16 * 1rem);
+                font-weight: 700;
+                line-height: 1.2em;
+                margin: 0;
+                color: var(--bodyTextColorWhite);
+                display: block;
             }
         }
     }
 }
+
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 75rem) {
+    #cs-navigation {
+        .cs-contact-link {
+            &:nth-of-type(2) {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+/* Larger Desktop - 1200px */
+@media only screen and (min-width: 100rem) {
+    #cs-navigation {
+        .cs-donate {
+            margin-left: auto;
+            display: flex;
+        }
+
+
+        .cs-nav-button {
+            margin: 0;
+        }
+    }
+}
+
 
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
@@ -975,27 +1536,56 @@
         #cs-navigation {
             background-color: var(--dark);
 
-            .cs-logo {
-                /* makes it turn white */
-                filter: grayscale(1) brightness(1000%);
-            }
 
-            .cs-li-link {
+            .cs-header,
+            .cs-link-content {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-li-link {
+
+            .cs-wrapper {
                 &:before {
-                    background-color: var(--primaryLight);
+                    background-color: #fdfaf3;
                 }
+            }
+
+
+            .cs-call {
+                .cs-header {
+                    opacity: 0.8;
+                }
+
+
+                .cs-link-content {
+                    opacity: 1;
+                }
+            }
+
+
+            .cs-link-content {
+                opacity: 0.8;
+            }
+
+
+            .cs-bottom-bar {
+                background-color: #2d354e;
+            }
+
+
+            .cs-logo,
+            .cs-link-icon {
+                /* turns it white */
+                filter: grayscale(1) brightness(1000%);
             }
         }
     }
 }
 
+
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
+
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
@@ -1009,6 +1599,7 @@
         min-height: 30vh;
         padding-top: calc(50 / 16 * 1rem);
 
+
         picture {
             z-index: -2;
             position: absolute;
@@ -1016,6 +1607,7 @@
             left: 0;
             height: 100%;
             width: 100%;
+
 
             img {
                 position: absolute;
@@ -1027,6 +1619,7 @@
             }
         }
 
+
         h1 {
             position: relative;
             margin: 0 auto;
@@ -1035,9 +1628,10 @@
             max-width: calc(500 / 16 * 1rem);
             width: 96%;
             font-size: calc(64 / 30 * 1rem);
-            color: #fff;
+            color: #fdfaf3;
             text-align: center;
         }
+
 
         p {
             display: block;
@@ -1045,9 +1639,10 @@
             margin-bottom: calc(30 / 16 * 1rem);
             max-width: calc(400 / 16 * 1rem);
             width: 96%;
-            color: #fff;
+            color: #fdfaf3;
             text-align: center;
         }
+
 
         &:before {
             z-index: -1;
@@ -1057,23 +1652,26 @@
             content: "";
             opacity: 0.7;
             display: block;
-            background: #000;
+            background: #2d354e;
             height: 100%;
             width: 100%;
         }
     }
 }
 
+
 /* Tablet */
 @media only screen and (min-width: 48rem) {
     #int-hero {
         font-size: 100%;
+
 
         h1 {
             font-size: calc(64 / 16 * 1rem);
         }
     }
 }
+
 
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
@@ -1087,9 +1685,11 @@
     }
 }
 
+
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
+
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
@@ -1097,9 +1697,11 @@
         position: relative;
         padding: calc(50 / 16 * 1rem) 0;
 
+
         .container {
             text-align: center;
         }
+
 
         picture {
             z-index: -2;
@@ -1108,6 +1710,7 @@
             left: 0;
             height: 100%;
             width: 100%;
+
 
             img {
                 position: absolute;
@@ -1119,15 +1722,17 @@
             }
         }
 
+
         .title {
             position: relative;
             margin-bottom: calc(36 / 16 * 1rem);
             font-size: min(9vw, 3rem);
             line-height: calc(58 / 48 * 1em);
             font-weight: 900;
-            color: #fff;
+            color: #fdfaf3;
             text-align: center;
         }
+
 
         p {
             opacity: 1;
@@ -1135,9 +1740,10 @@
             margin-bottom: calc(36 / 16 * 1rem);
             max-width: calc(598 / 16 * 1rem);
             width: 96%;
-            color: #fff;
+            color: #fdfaf3;
             text-align: center;
         }
+
 
         &:before {
             z-index: -1;
@@ -1147,12 +1753,13 @@
             content: "";
             opacity: 0.7;
             display: block;
-            background: #000;
+            background: #2d354e;
             height: 100%;
             width: 100%;
         }
     }
 }
+
 
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
@@ -1160,6 +1767,7 @@
         padding: calc(168 / 16 * 1rem) 0;
     }
 }
+
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
@@ -1171,10 +1779,12 @@
             width: 90.0625%;
         }
 
+
         picture {
             left: 50%;
             transform: translateX(-50%);
             width: 90.0625%;
+
 
             &:before {
                 z-index: 1;
@@ -1184,7 +1794,7 @@
                 content: "";
                 opacity: 0.7;
                 display: block;
-                background: #000;
+                background: #2d354e;
                 height: 100%;
                 width: 100%;
             }
@@ -1211,6 +1821,7 @@
     }
 }
 
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
@@ -1222,253 +1833,205 @@
     }
 }
 
+
 /*-- -------------------------- -->
-<---           Footer           -->
+<---          Footer            -->
 <--- -------------------------- -*/
 
-/* Mobile */
+
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #footer {
-        background: #1c1c1c;
-        padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
-        font-size: min(4vw, 1.2em);
+    #cs-footer-308 {
+        padding: var(--sectionPadding);
+        background-color: #2d354e;
 
-        .left-section {
+
+        .cs-container {
+            width: 100%;
+            /* reset on desktop */
+            max-width: calc(700 / 16 * 1rem);
             margin: auto;
-            margin-bottom: calc(50 / 16 * 1rem);
-            text-align: center;
-            .logo {
-                display: inline-block;
-                margin: auto;
-                margin-bottom: calc(30 / 16 * 1em);
-                height: calc(32 / 16 * 1em);
-                width: auto;
-                text-align: center;
-
-                img {
-                    display: block;
-                    height: 100%;
-                    width: auto;
-                }
-            }
-
-            p {
-                opacity: 0.9;
-                margin: auto;
-                width: 100%;
-                font-size: calc(14 / 16 * 1rem);
-                line-height: calc(27 / 14 * 1rem);
-                color: #fff;
-                text-align: center;
-            }
-        }
-
-        .right-section {
-            margin: auto;
-            max-width: calc(407 / 16 * 1rem);
-            width: 96%;
-            .lists {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                margin: auto;
-                max-width: calc(307 / 16 * 1rem);
-                width: 96%;
-                ul {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    padding: 0;
-
-                    li {
-                        opacity: 0.9;
-                        margin-bottom: calc(12 / 16 * 1rem);
-                        list-style: none;
-                        font-size: calc(18 / 16 * 1rem);
-                        color: #fff;
-
-                        a {
-                            text-decoration: none;
-                            line-height: calc(21 / 18 * 1em);
-                            color: #fff;
-                            transition: color 0.3s;
-                            &:hover {
-                                color: var(--primary);
-                            }
-                        }
-                    }
-                    h2 {
-                        position: relative;
-                        margin-bottom: calc(37 / 16 * 1rem);
-                        text-transform: uppercase;
-                        font-size: calc(18 / 16 * 1rem);
-                        line-height: calc(21 / 18 * 1em);
-                        font-weight: bold;
-                        color: #fff;
-
-                        &:before {
-                            position: absolute;
-                            bottom: calc(-16 / 16 * 1rem);
-                            left: 0;
-                            content: "";
-                            opacity: 1;
-                            display: block;
-                            background: var(--primary);
-                            height: calc(2 / 16 * 1rem);
-                            width: calc(97 / 16 * 1rem);
-                        }
-                    }
-
-                    &:nth-of-type(3) {
-                        margin-top: calc(50 / 16 * 1rem);
-                        li {
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-                            margin-bottom: calc(16 / 16 * 1rem);
-
-                            &:last-of-type {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .buttons {
-                display: flex;
-                justify-content: center;
-            }
-
-            .cs-button-solid {
-                margin: 0;
-                height: calc(53 / 16 * 1rem);
-                width: calc(250 / 16 * 1rem);
-                padding-top: calc(3 / 16 * 1rem);
-            }
-        }
-
-        .credit {
-            margin: auto;
-            margin-top: calc(100 / 16 * 1rem);
-            width: 96%;
-            font-size: calc(16 / 16 * 1rem);
-            line-height: calc(36 / 16 * 1rem);
-            color: #fff;
-            text-align: center;
-
-            a {
-                text-decoration: none;
-                font-size: calc(16 / 16 * 1rem);
-                color: var(--primary);
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            .copyright {
-                display: block;
-                font-size: calc(16 / 16 * 1rem);
-            }
-        }
-    }
-}
-
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-    #footer {
-        font-size: min(1.2vw, 1em);
-        .container {
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            margin: auto;
-            max-width: calc(1320 / 16 * 1rem);
-            width: 96%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: calc(40 / 16 * 1rem);
+        }
+
+
+        .cs-logo-group {
+            /* takes up all the space, lets the other ul's wrap below it */
+            width: 100%;
+            position: relative;
+        }
+
+
+        .cs-logo {
+            width: calc(350 / 16 * 1rem);
+            height: auto;
+            display: block;
+            margin-bottom: calc(24 / 16 * 1rem);
+        }
+
+
+        .cs-logo-img {
+            width: 100%;
+            height: auto;
+
+
+            &.dark {
+                display: none;
+            }
+        } 
+        
+        .cs-text {
+            color: #fdfaf3
+        }
+        /* Navigation Links */
+        .cs-nav {
+            width: 100%;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: calc(12 / 16 * 1rem);
         }
 
-        .left-section {
-            margin: 0;
-            width: calc(409 / 16 * 1rem);
-            text-align: left;
 
-            .logo {
-                margin-left: 0;
-                height: calc(40 / 16 * 1rem);
-                text-align: left;
-            }
-
-            p {
-                margin-left: 0;
-                text-align: left;
-            }
+        .cs-nav-li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
-        .right-section {
-            margin: 0;
-            max-width: none;
-            width: calc(609 / 16 * 1rem);
 
-            .lists {
-                margin: 0;
-                max-width: calc(769 / 16 * 1rem);
-                width: 96%;
+        .cs-header {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: calc(12 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: block;
+        }
 
-                ul {
-                    li {
-                        a {
-                            position: relative;
 
-                            &:before {
-                                position: absolute;
-                                bottom: calc(-3 / 16 * 1rem);
-                                left: 0;
-                                content: "";
-                                opacity: 1;
-                                display: block;
-                                background: var(--primary);
-                                height: calc(2 / 16 * 1rem);
-                                width: 0%;
-                                transition: width 0.3s;
-                            }
+        .cs-nav-link {
+            font-size: calc(16 / 16 * 1rem);
+            text-decoration: none;
+            line-height: 1.5em;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s;
 
-                            &:hover {
-                                &:before {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        margin-top: 0;
 
-                        li:first-of-type {
-                            margin-bottom: 0;
-                        }
-                    }
+            &:before {
+                /* underline */
+                content: "";
+                width: 0%;
+                height: calc(2 / 16 * 1rem);
+                background: currentColor;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: calc(-2 / 16 * 1rem);
+                left: 0;
+                transition: width 0.3s;
+            }
+
+
+            &:hover {
+                color: var(--primary);
+                &:before {
+                    width: 100%;
                 }
             }
-
-            .buttons {
-                justify-content: flex-start;
-            }
         }
 
-        .credit {
-            .copyright {
-                display: inline-block;
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            margin-right: calc(12 / 16 * 1rem);
+        }
+
+
+        .cs-bottom {
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            margin-top: calc(32 / 16 * 1rem);
+            padding-top: calc(24 / 16 * 1rem);
+            border-top: 1px solid #2d354e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .cs-copyright,
+        .cs-copyright-link {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColorWhite);
+        }
+
+
+        .cs-copyright-link {
+            text-decoration: none;
+            transition: color 0.3s;
+            &:hover {
+                color: var(--primary);
             }
         }
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #footer {
-            background: #061623;
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cs-footer-308 {
+        .cs-container {
+            row-gap: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            row-gap: calc(40 / 16 * 1rem);
+        }
+
+
+        .cs-nav {
+            width: auto;
+        }
+    }
+}
+
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-footer-308 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-wrap: nowrap;
+            /* align everything to the right */
+            justify-content: flex-end;
+            column-gap: calc(84 / 16 * 1rem);
+        }
+
+
+        .cs-logo-group {
+            width: 30%;
+            max-width: calc(387 / 16 * 1rem);
+            /* pushes away from everything to the right */
+            margin-right: auto;
+        }
+
+
+        .cs-text {
+            width: 100%;
         }
     }
 }

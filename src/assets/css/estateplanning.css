@@ -1,0 +1,216 @@
+/* PAGE-SPECIFIC STYLES FOR THE SERVICES PAGE */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-1101 {
+    padding-top: 500px;
+  }
+}
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-1101,
+  #RPsbsr-1101 {
+    padding: var(--sectionPadding);
+  }
+  #RPsbs-1101 .cs-container,
+  #RPsbsr-1101 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #RPsbs-1101 .cs-content,
+  #RPsbsr-1101 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RPsbs-1101 .cs-text,
+  #RPsbsr-1101 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #RPsbs-1101 .cs-text:last-of-type,
+  #RPsbsr-1101 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RPsbs-1101 .cs-ul,
+  #RPsbsr-1101 .cs-ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  #RPsbs-1101 .cs-li,
+  #RPsbsr-1101 .cs-li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #RPsbs-1101 .cs-h3,
+  #RPsbsr-1101 .cs-h3 {
+    /* 20px - 25px */
+    font-size: 1.25rem, 3vw, 1.5625rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+  }
+  #RPsbs-1101 .cs-li-text,
+  #RPsbsr-1101 .cs-li-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 39.375rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #RPsbs-1101 .cs-image-group,
+  #RPsbsr-1101 .cs-image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+    font-size: min(2.235vw, 0.8em);
+    width: 40.5em;
+    height: 37.125em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-1101 .cs-picture,
+  #RPsbsr-1101 .cs-picture {
+    position: absolute;
+  }
+  #RPsbs-1101 .cs-picture img,
+  #RPsbsr-1101 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #RPsbs-1101 .cs-picture1,
+  #RPsbsr-1101 .cs-picture1 {
+    width: 20.1875em;
+    height: 27.9375em;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  #RPsbs-1101 .cs-picture2,
+  #RPsbsr-1101 .cs-picture2 {
+    width: 19.0625em;
+    height: 27.5625em;
+    bottom: 0;
+    right: 0;
+  }
+  #RPsbs-1101 .cs-stripes,
+  #RPsbsr-1101 .cs-stripes {
+    width: 34.25em;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 5em;
+    right: 2.5em;
+    z-index: -1;
+  }
+  #RPsbs-1101 .cs-graphic,
+  #RPsbsr-1101 .cs-graphic {
+    width: 11.5em;
+    height: auto;
+    position: absolute;
+    bottom: 5em;
+    right: 13.875em;
+    z-index: 10;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbs-1101 .cs-container,
+  #RPsbsr-1101 .cs-container {
+    max-width: 80em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #RPsbs-1101 .cs-image-group,
+  #RPsbsr-1101 .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #RPsbs-1101 .cs-title,
+  body.dark-mode #RPsbs-1101 .cs-text,
+  body.dark-mode #RPsbs-1101 .cs-h3,
+  body.dark-mode #RPsbs-1101 .cs-li-text,
+  body.dark-mode #RPsbsr-1101 .cs-title,
+  body.dark-mode #RPsbsr-1101 .cs-text,
+  body.dark-mode #RPsbsr-1101 .cs-h3,
+  body.dark-mode #RPsbsr-1101 .cs-li-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #RPsbs-1101 .cs-text,
+  body.dark-mode #RPsbs-1101 .cs-li-text,
+  body.dark-mode #RPsbsr-1101 .cs-text,
+  body.dark-mode #RPsbsr-1101 .cs-li-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #RPsbs-1101 .cs-stripes,
+  body.dark-mode #RPsbsr-1101 .cs-stripes {
+    opacity: 0.2;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-1101 {
+    background-color: #f7f7f7;
+  }
+  #RPsbsr-1101 .cs-picture1 {
+    right: 0;
+    left: auto;
+  }
+  #RPsbsr-1101 .cs-picture2 {
+    left: 0;
+    right: auto;
+  }
+  #RPsbsr-1101 .cs-stripes {
+    left: 2.5em;
+    right: auto;
+  }
+  #RPsbsr-1101 .cs-graphic {
+    left: 13.875em;
+    right: auto;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbsr-1101 .cs-image-group {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 60rem) {
+  body.dark-mode #RPsbsr-1101 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/*# sourceMappingURL=estateplanning.css.map */

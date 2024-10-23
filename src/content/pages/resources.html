@@ -1,0 +1,79 @@
+---
+title: 'Resources | ACP Law'
+description: 'Access valuable estate planning resources provided by ACP Law to help guide you through the process of protecting your assets and planning for your future.'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'resources/'
+eleventyNavigation:
+    key: Resources
+    order: 500
+---
+
+
+{% extends "layouts/base.html" %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/resources.css">
+{% endblock %}
+
+
+{% block body %}
+
+
+<div id="cs-content-1801">
+    <div class="cs-flex">
+        <span class="cs-topper">Estate Planning Questionnaire</span>
+        <p class="cs-text">
+            monmouth county new jersey. individuals and couples estate planning questionnaires. <br>wills, trusts and estates.<br> Anna Catherine Pelligra, Esquire
+        </p>
+    </div>
+    <a href="" class="cs-button-solid">Schedule An Call</a>
+</div>
+
+
+<div class="form-section">
+    <h3>Estate Planning Questionnaire (Couple)</h3>
+    <iframe src="https://matter-intake.com/create/65f3842f-c0a9-4582-b493-3c38ebc4b54e"
+        style="
+            display: block;
+            width: 100%;
+            height: 600px;
+            border: none;
+        "
+        id="matter-intake-iframe"
+        name="matter-intake-iframe"
+    ></iframe>
+</div>
+
+
+<div class="form-section">
+    <h3>Estate Planning Questionnaire (Individual)</h3>
+    <iframe src="https://matter-intake.com/create/17df50ba-e51d-4417-9e66-ae53cc3a2996"
+        style="
+            display: block;
+            width: 100%;
+            height: 600px;
+            border: none;
+        "
+        id="matter-intake-iframe"
+        name="matter-intake-iframe"
+    ></iframe>
+</div>
+           
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+                item.classList.toggle('active');
+            };
+            item.addEventListener('click', onClick);
+        }
+    });
+</script>
+
+
+    {% include 'components/cta.html' %}
+
+
+{% endblock %}

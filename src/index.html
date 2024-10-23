@@ -1,6 +1,6 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
+title: 'ACP Law | Estate Planning | Manasquan, NJ'
+description: 'Welcome to ACP Law, your trusted estate planning attorney in Manasquan, NJ. We provide personalized services to protect your assets and secure your future.'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -9,11 +9,14 @@ eleventyNavigation:
   order: 100
 ---
 
+
 {% extends "layouts/base.html" %}
+
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
+
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -32,6 +35,7 @@ eleventyNavigation:
                 });
         }
     </script>
+
 
     <!-- JSON Schema Markup -->
     <script type="application/ld+json">
@@ -72,317 +76,335 @@ eleventyNavigation:
     </script>
 {% endblock %}
 
+
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17"/>
-                    Get in Touch
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+
+<section id="hero-1623">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">
+                Anna Catherine Pelligra Law
+            </span>
+            <h1 class="cs-title">
+                Planning Your Legacy Through Life’s Changing Tides</h1>
+            <a href="/contact" class="cs-button-solid">Get A Free Consultation</a>
+            <!--Bottom Corners-->
+            <div class="cs-corners" aria-hidden="true"></div>
+        </div>
+    </div>
+
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/monmouthcountyestateattorney.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/monmouthcountyestateattorney.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="jerseyshore" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+
+<section id="services-1623">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/estateplanning" class="cs-link">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-circle-check.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <h3 class="cs-h3">Wills & Testaments</h3>
+                    <p class="cs-item-text">
+                        Direct how your assets are distributed and appoint guardians for children.
+                    </p>
                 </a>
-            </div>
-        </div>
+            </li>
+            <li class="cs-item">
+                <a href="/estateplanning" class="cs-link">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-speedometer.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <h3 class="cs-h3">Revocable Trusts</h3>
+                    <p class="cs-item-text">
+                        Manage assets, avoid probate, and maintain privacy.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/estateplanning" class="cs-link">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-bouy.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <h3 class="cs-h3">Powers of Attorney</h3>
+                    <p class="cs-item-text">
+                        Authorize agents for finances and outline healthcare wishes.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/estateplanning" class="cs-link">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-thumb.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <h3 class="cs-h3">Advanced Estate Planning</h3>
+                    <p class="cs-item-text">
+                        Protect wealth and optimize taxes with specialized trusts.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                               
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
 
-        <!-- Background Image -->
+
+<section id="sbs-578">
+    <div class="cs-container">
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/monmouthcountyestateattorney2.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/monmouthcountyestateattorney2.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney2.jpg" alt="beach" width="494" height="700">
         </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77"/>
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+        <div class="cs-content">
+            <span class="cs-topper">Jersey Shore Wills, Trusts and Estates Attorney</span>
+            <h2 class="cs-title">Secure Your Future with Estate Planning</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                Estate planning is often a complex process, leading many to delay or avoid it all together. Working with an experienced attorney can simplify the process. We will guide you through the legal procedures, helping to ensure your future and your family's future are secure without unnecessary stress.
             </p>
+            <p class="cs-text">
+                New Jersey has a range of estate planning options. Every individual’s situation is unique, which is why it’s essential to have a customized plan that addresses your specific needs and goals.
+
+
+            </p>
+            <p class="cs-text">
+                A seasoned New Jersey trust and estates attorney can help you navigate these regulations, providing expert guidance on creating or updating your estate plan, ensuring compliance with state laws, and protecting your assets for generations to come.
+            </p>
+            <a href="/contact" class="cs-button-solid">Free Consultation</a>
+        </div>
+    </div>
+</section>
+                               
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+
+<section id="services-940">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">ACP Law</span>
+            <h2 class="cs-title">Estate Planning Services</h2>
+            <p class="cs-text">
+                Whether you’re looking to draft a will, create a power of attorney, ensure your legacy is protected or revise an already existing plan, we are ready to guide you through the process with care, precision and efficiency.
+            </p>
+            <a class="cs-button-solid" aria-label="read more about our services" href="/estateplanning">Learn More</a>
+        </div>
+        <!-- Right Image Section -->
+        <div class="cs-picture-group">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/monmouthcountyestateattorney1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/monmouthcountyestateattorney1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney1.jpg" alt="beach" width="630" height="380" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+    <ul class="cs-card-group">
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Last Wills & Testaments</h3>
+            <p class="cs-item-text">
+                Outlines asset distribution, names beneficiaries, executors, and guardians for children, ensuring your wishes are followed.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Revocable Trusts</h3>
+            <p class="cs-item-text">
+                A flexible tool for managing assets, avoiding probate, and maintaining privacy.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Powers of Attorney</h3>
+            <p class="cs-item-text">
+                Grants someone authority to manage your affairs if you become incapacitated, avoiding costly delays.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Medical Directives</h3>
+            <p class="cs-item-text">
+                Specifies your healthcare preferences if you're unable to communicate, easing decision-making for loved ones.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Living Wills</h3>
+            <p class="cs-item-text">
+                States your choices for end-of-life care, such as life-sustaining treatments or comfort care.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+        <li class="cs-item">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/tree-icon.svg" alt="hair cut" width="40" height="40">
+            <h3 class="cs-h3">Advanced Estate Planning</h3>
+            <p class="cs-item-text">
+                Protects wealth, optimizes taxes, and secures assets through specialized strategies.
+            </p>
+            <a href="/estateplanning" class="cs-link">Read More</a>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney.jpg" alt="beach" width="480" height="425">
+            </picture>
+        </li>
+    </ul>
+    <!--Waves Background-->
+    <picture class="cs-waves">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves-m.svg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg" alt="waves graphic" width="1920" height="331" aria-hidden="true">
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+
+<section id="sbsr-575">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/monmouthcountyestateattorney17.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/monmouthcountyestateattorney17.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney17.jpg" alt="attorney" width="618" height="537">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Meet Your Attorney</span>
+            <h2 class="cs-title">Anna Catherine Pelligra, Esq.</h2>
+            <p class="cs-text">
+                Anna, a proud Manasquan native, brings a deep sense of community and dedication to her work at ACP Law. After earning her law degree from Villanova University, Anna returned to her roots in New Jersey to serve the area she has always called home.
+            </p>
+            <p class="cs-text">
+                With a passion for estate planning and helping families protect their legacy, she is committed to providing personalized legal solutions that meet her clients' unique needs. Whether navigating complex legal issues or offering compassionate guidance, Anna’s goal is to ensure her clients feel supported every step of the way.
+            </p>
+            <a href="/about" class="cs-button-solid">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+
+<section id="why-choose-1635">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Why Choose ACP Law</span>
+                <h2 class="cs-title">Planning Your Legacy at ACP Law</h2>
+            </div>
+            <p class="cs-text">
+                Your legacy is a reflection of your hard work, dedication, and the life you have built. Now, it’s time to take the next step to ensure that your estate remains protected for both today and tomorrow. <br><br>Our firm is dedicated to serving the Jersey Shore. We serve the Monmouth County and Ocean County area, offering comprehensive legal solutions tailored to your unique needs. We’re here to ensure you have a solid, actionable plan in place to protect what matters most — your family, your assets, and your peace of mind.
+            </p>
+        </div>  
+        <div class="cs-wrapper">
             <ul class="cs-card-group">
-                <!-- Review 1 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/call-gold.svg"
+                                loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Free Consultation</h3>
+                        <p class="cs-item-text">
+                            Getting started is easy with a free consultation call. We listen to your concerns and provide expert guidance to tailor an estate plan that fits your unique situation.
+                        </p>
+                    </div>
                 </li>
-                <!-- Review 2 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chat-gold.svg"
+                                loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Answer a Few Questions</h3>
+                        <p class="cs-item-text">
+                            Filling out our quick and easy form helps us gather the information needed to make informed decisions about your estate. It’s hassle-free, straightforward, and designed to save you time.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/money-gold.svg"
+                                loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Secure Your Estate</h3>
+                        <p class="cs-item-text">
+                            We handle the details so you don’t have to. From start to finish, our team at ACP Law will ensure your estate is protected, giving you peace of mind for the future.
+                        </p>
+                    </div>
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+            <div class="cs-image-group">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/monmouthcountyestateattorney16.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/monmouthcountyestateattorney16.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/monmouthcountyestateattorney16.jpg" alt="attorney" width="434" height="414">
+                    </picture>
+                    <div class="cs-box">
+                        <span class="cs-header">Anna C. Pelligra</span>
+                        <span class="cs-desc">NJ Estate Attorney</span>
+                    </div>
         </div>
-    </section>
-
+    </div>
+</section>
+                           
     {% include 'components/cta.html' %}
+
+
 {% endblock %}
