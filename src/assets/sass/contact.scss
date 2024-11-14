@@ -12,7 +12,7 @@
         padding: var(--sectionPadding);
         position: relative;
         z-index: 1;
-
+        padding-bottom: 0;
 
         .cs-container {
             width: 100%;
@@ -36,11 +36,13 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: flex-start;
+            padding-bottom: 0;
         }
 
 
         .cs-title {
             margin: 0 0 calc(32 / 16 * 1rem) 0;
+            padding-bottom: 0;
         }
 
 
